@@ -1,0 +1,8 @@
+public/js
+node_modules
+.shadow-cljs
+
+target
+dist
+dist.tar.gz
+
