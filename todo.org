@@ -1,0 +1,10 @@
+#+TITLE: TODO
+#+STARTUP: overview
+
+* ICE draw animated tiles in tilemap
+tiles with an animation have the following properties:
+- length :: number of tiles in the animation
+- delay :: optional, how long between frames, defaults to 100ms
+
+* ICE use a sprite for player & animate them
+* ICE draw player under certain tiles
