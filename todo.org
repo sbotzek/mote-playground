@@ -8,3 +8,5 @@ tiles with an animation have the following properties:
 
 * ICE use a sprite for player & animate them
 * ICE draw player under certain tiles
+* PAUSE experiment with using combined buffer(s) for drawing the tilemap
+Initial trials seems to significantly reduce the amount of time spent in draw, but it would take more work to make it work properly.  Tilemap rendering isn't exactly a bottleneck either.

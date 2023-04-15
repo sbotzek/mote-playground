@@ -17,15 +17,17 @@
           {:target     :browser
            :output-dir "public/js"
            :asset-path "/js"
-           :dev {:compiler-options {:closure-defines
-                                    {re-frame.trace.trace-enabled?        true
-                                     day8.re-frame.tracing.trace-enabled? true}}}
+           :dev {:compiler-options {:closure-defines {}}}
            :modules    {:widgets {:entries [widgets.fps widgets.help]}
                         :sprite {:entries [experiments.sprite]
                                  :init-fn experiments.sprite/init!
                                  :depends-on #{:widgets}}
                         :keyboard-movement {:entries [experiments.keyboard-movement]
                                             :init-fn experiments.keyboard-movement/init!
-                                            :depends-on #{:widgets}}}
-           :devtools {:preloads [day8.re-frame-10x.preload]}
+                                            :depends-on #{:widgets}}
+                        :tmap-combine-buffers {:entries [experiments.tmap-combine-buffers]
+                                                :init-fn experiments.tmap-combine-buffers/init!
+                                                :depends-on #{:widgets}}
+                        }
+           :devtools {:preloads []}
            :release {:output-dir "target/public/js"}}}}
