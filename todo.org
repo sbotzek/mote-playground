@@ -1,6 +1,7 @@
 #+TITLE: TODO
 #+STARTUP: overview
 
+* TODO fix up async loading
 * ICE draw animated tiles in tilemap
 tiles with an animation have the following properties:
 - length :: number of tiles in the animation
