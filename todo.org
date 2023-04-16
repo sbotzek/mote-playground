@@ -1,7 +1,10 @@
 #+TITLE: TODO
 #+STARTUP: overview
+* DONE fix up async loading
+CLOSED: [2023-04-16 Sun 07:09]
+Added an assetdb namespace.
 
-* TODO fix up async loading
+I need a more consistent method for this
 * ICE draw animated tiles in tilemap
 tiles with an animation have the following properties:
 - length :: number of tiles in the animation

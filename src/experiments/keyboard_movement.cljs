@@ -5,9 +5,9 @@
    [re-frame.core :as rf]
    [mote.gl :as mgl]
    [cljs.core.async :refer [go <!]]
-   [cljs.core.async.interop :refer-macros [<p!]]
    [mote.tilemap :as tm]
    [mote.input :as input]
+   [mote.assetdb :as assetdb]
    [mote.sprite :as sp]
    [mote.transform :refer [transform transform->matrix transform->inverted-matrix]]
    [widgets.help :refer [help-widget]]
@@ -202,7 +202,7 @@
                                            0.1 0.1 1.0 0.0 0.0 0.8
                                            0.9 0.1 1.0 0.0 0.0 0.8])
                      (mgl/sync-buffer-data))
-          shader-source (<p! (.text (<p! (js/fetch "/glsl/rectangle.glsl"))))
+          shader-source (<! (assetdb/load-asset "/glsl/rectangle.glsl"))
           shader (mgl/load-shader gl shader-source)]
       {:buffer buffer
        :shader shader})))
