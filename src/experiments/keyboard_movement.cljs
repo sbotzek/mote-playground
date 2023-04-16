@@ -147,7 +147,7 @@
                                                                    (update-position position dp tilemap)))]
         (-> state
             (assoc :player-transform player-transform')
-            (assoc :camera player-transform')))
+            (update :camera assoc :position (:position player-transform'))))
       state)))
 
 (defn handle-input-zoom
@@ -239,7 +239,7 @@
        :tilemap tilemap
        :tilemap-transform (transform)
        :player (<! (create-player gl))
-       :player-transform  start-transform
+       :player-transform start-transform
        :settings {:tilemap/draw-hidden false}})))
 
 (defonce widgets (atom nil))
