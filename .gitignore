@@ -6,3 +6,6 @@ target
 dist
 dist.tar.gz
 
+# for intellij
+.idea
+pom.xml
